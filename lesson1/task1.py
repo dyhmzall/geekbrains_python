@@ -6,7 +6,7 @@ my_age = 32
 
 print(f"Мне {my_age}. Я родился {my_birth_day}")
 
-age = input("А сколько лет вам?")
-birth_day = input("Введите дату вашего рождения")
+age = input("А сколько лет вам: ")
+birth_day = input("Введите дату вашего рождения: ")
 
 print(f"Вам {age}. Вы родились {birth_day}")
