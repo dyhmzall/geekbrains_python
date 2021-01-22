@@ -18,4 +18,4 @@ else:
 
     employee_count = int(input("Введите количество сотруников фирмы: "))
     profit_to_employee = round((profit / employee_count), 2)
-    print(f"Прибыль фирмы на одного сотрудника составляет {profit_to_employee}")
+    print(f"Прибыль фирмы на одного сотрудника составляет {profit_to_employee:.2f}")
