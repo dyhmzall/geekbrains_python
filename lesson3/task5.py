@@ -9,8 +9,8 @@
 def sum_number_in_string(string):
     """
     Вытащить из строки числа и просуммировать их
-    :param string:
-    :return:
+    :param string: str
+    :return: float, bool
     """
     summa = 0
     for number in string.split():
