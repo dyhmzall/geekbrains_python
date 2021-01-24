@@ -3,6 +3,16 @@
 # Функция должна принимать параметры как именованные аргументы. Реализовать вывод данных о пользователе одной строкой.
 
 def print_user(name, surname, birth_date, city, email, phone):
+    """
+    Выводит данные пользователя
+    :param name: string
+    :param surname: string
+    :param birth_date: string
+    :param city: string
+    :param email: string
+    :param phone: string
+    :return:
+    """
     print(f"{name} {surname} <{email}> ({phone}), {city}, дата рождения: {birth_date}, ")
 
 
