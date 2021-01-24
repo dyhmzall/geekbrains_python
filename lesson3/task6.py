@@ -7,6 +7,7 @@
 # Необходимо использовать написанную ранее функцию int_func().
 
 def int_func(text):
+    """Сделать первую букву заглавной (аналог capitalize())"""
     # вариант 1
     # return text.capitalize()
     # вариант 2
@@ -14,6 +15,7 @@ def int_func(text):
 
 
 def my_title(string):
+    """Сделать первую букву каждого слова заглавной (аналог title())"""
     return ' '.join(list(map(int_func, string.split())))
 
 
