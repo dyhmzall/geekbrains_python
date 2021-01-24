@@ -2,6 +2,7 @@
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 
 def division(number1, number2):
+    """Возвращает деление первого параметра на второе"""
     try:
         result = number1 / number2
     except ZeroDivisionError:
@@ -10,6 +11,7 @@ def division(number1, number2):
 
 
 def number_input(message):
+    """Обеспечивает ввод корректного значения"""
     while True:
         try:
             number = float(input(message))
