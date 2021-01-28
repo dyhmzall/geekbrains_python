@@ -28,7 +28,11 @@ while True:
     print("Введите данные нового товара")
 
     try:
-        name = input("Введите название товара: ")
+        name = input("Введите название товара (введите q для выхода): ")
+
+        if name == 'q':
+            break
+
         price = float(input("Введите цену товара: "))
         quantity = int(input("Введите количество товаров: "))
         unit = input("Введите единицу измерения: ")
@@ -39,17 +43,17 @@ while True:
     products.append((product_id, {"название": name, "цена": price, "количество": quantity, "ед": unit}))
     product_id += 1
 
-    # выведем текущие товары
-    print(products)
+# выведем текущие товары
+print(products)
 
-    analytics = dict()
+analytics = dict()
 
-    for item_id, product in products:
-        for product_property, product_value in product.items():
-            if analytics.get(product_property) is None:
-                analytics[product_property] = [product_value]
-            else:
-                analytics[product_property].append(product_value)
+for item_id, product in products:
+    for product_property, product_value in product.items():
+        if product_property not in analytics:
+            analytics[product_property] = [product_value]
+        else:
+            analytics[product_property].append(product_value)
 
-    # выведем аналитику
-    print(analytics)
+# выведем аналитику
+print(analytics)

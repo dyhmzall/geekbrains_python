@@ -18,9 +18,8 @@ while True:
 replace_list = original_list.copy()
 
 # суть алгоритма - берем четные (по порядку) элементы и меняем местами со следующими элементами
-for key in range(0, len(replace_list), 2):
-    if key != len(replace_list) - 1:  # не обрабатываем, если дошли до последнего элемента
-        replace_list[key], replace_list[key + 1] = replace_list[key + 1], replace_list[key]
+for key in range(0, len(replace_list) - 1, 2):
+    replace_list[key], replace_list[key + 1] = replace_list[key + 1], replace_list[key]
 
 print(original_list)
 print(replace_list)
