@@ -7,7 +7,7 @@
 # Запускать скрипт нужно по формату (порядок не имеет значение)
 # $ python task1.py hours=10 rate=2500 prize=5000
 
-from sys import argv
+from sys import argv, exit
 
 
 def calc_zp(hours, rate, prize):
@@ -24,6 +24,6 @@ for param in argv:
 for param_name in ['hours', 'rate', 'prize']:
     if param_name not in params:
         print("Должны быть заполнены все параметры, например hours=10 rate=2500 prize=5000")
-        break
+        exit(1)  # выход из программы
 
 print(f"Зарплата составляет: {calc_zp(**params)}")
