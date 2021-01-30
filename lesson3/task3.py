@@ -18,17 +18,13 @@ def get_max_from_list(number_list, number_count=1):
     :param number_count: int (по-умолчанию 1)
     :return: list
     """
-    max_values = list()
 
     # если передали список с количество, меньшим,
     # чем нужно максимальных значений - вернем исходный
     if len(number_list) <= number_count:
         return number_list
 
-    for i in range(number_count):
-        max_value = max(number_list)
-        number_list.remove(max_value)
-        max_values.append(max_value)
+    max_values = sorted(number_list, reverse=True)[0:number_count]
 
     return max_values
 
