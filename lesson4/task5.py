@@ -19,4 +19,7 @@ even_list2 = [el for el in range(100, 1001, 2)]
 print(even_list1)
 print(even_list2)
 
+# Вариант первый (вынесенная функция), какой лучше?
 print(reduce(multi_even_list, even_list1))
+# Вариант второй (анонимная функция)
+print(reduce(lambda acc, x: acc * x, even_list2))
